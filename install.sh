@@ -34,19 +34,13 @@ sudo apt-get update
 
 sudo rm -rf /vagrant/html
 
-if [ ! -e "/etc/apache2/sites-available/cnp.conf" ];
-    then
-
-    # PRC Revise Host Here
-    sudo cp /vagrant/FILES/cnp.conf /etc/apache2/sites-available
-    sudo a2ensite cnp
-    sudo service apache2 reload
-fi
-
+echo "Finishing up"
 # Disable the default site, since we're now serving up CNP for all Vhosts or direct IP Access
 sudo a2dissite 000-default
 
-sudo service apache2 restart  # Needed to load pgsql driver.
+sudo service apache2 restart  
+
+
 
 
 
