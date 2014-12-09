@@ -19,9 +19,7 @@ else
 	    sudo service apache2 reload
 	fi	
 	# This would be the place to do a git clone
-	mkdir $sws_dir
-	mkdir $sws_dir/public
-	cp SWSFiles/index.php $sws_dir/public
+	git clone https://github.com/ejaxon/Visual-Town-Budget.git
 fi
 
 
